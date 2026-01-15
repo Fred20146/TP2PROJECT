@@ -3,27 +3,36 @@ using UnityEngine.InputSystem;
 
 public class Gun : MonoBehaviour
 {
-    public InputActionReference Touche;
+    [Header("Input")]
+    public InputActionReference shootAction;
 
-    private void OnEnable()
+    [Header("Projectile")]
+    public GameObject projectilePrefab;
+
+    void OnEnable()
     {
-        Touche.action.Enable();
-        Touche.action.performed += OnTouchePressed;
+        shootAction.action.Enable();
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
-        Touche.action.Disable();
-        Touche.action.performed -= OnTouchePressed;
+        shootAction.action.Disable();
     }
 
-    // void Update()
-    // {
-        
-    // }
-
-    void OnTouchePressed(InputAction.CallbackContext obj)
+    void Update()
     {
-        print("GOOD !");
+        if (shootAction.action.WasPressedThisFrame())
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(
+            projectilePrefab,
+            transform.position,
+            transform.rotation
+        );
     }
 }
