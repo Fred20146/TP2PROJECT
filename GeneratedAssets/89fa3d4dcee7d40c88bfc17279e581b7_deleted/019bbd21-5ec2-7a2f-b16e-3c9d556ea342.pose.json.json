@@ -1,0 +1,11 @@
+{
+    "asset": "9d50e333c6c064574a6dac43a10a1160",
+    "fileName": "019bbd21-5ec2-7a2f-b16e-3c9d556ea342.pose.json",
+    "prompt": "open the Chest_01_2 from theChest_01 ti discover the skull inside the chest_01",
+    "negativePrompt": "",
+    "model": "9e46c009-67d8-4254-a3a0-32e3168247ee",
+    "modelName": "Text to Motion",
+    "customSeed": 689905953,
+    "w3CTraceId": "a1c0189cef60dbee0d1700ddbdf94dad",
+    "isTrimmed": false
+}
